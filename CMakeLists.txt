@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.4)
 project(Notepad++ VERSION 7.5.3)
 
 
-find_package(Boost COMPONENTS regex)
+find_package(Boost COMPONENTS regex REQUIRED)
 
 set(scintilla_PUBLIC_HEADERS
     scintilla/include/BoostRegexSearch.h
