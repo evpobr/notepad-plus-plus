@@ -597,6 +597,9 @@ target_compile_definitions(notepad++
         _CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;
         _CRT_NON_CONFORMING_SWPRINTFS=1;_CRT_NON_CONFORMING_WCSTOK
         )
+if(MSVC)
+    target_compile_options(notepad++ PRIVATE /EHa)
+endif()
 target_link_libraries(notepad++
     PUBLIC SciLexer
     PRIVATE comctl32;crypt32;dbghelp;wintrust;sensapi;version
