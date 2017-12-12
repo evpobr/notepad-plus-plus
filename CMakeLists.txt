@@ -595,7 +595,7 @@ target_compile_definitions(notepad++
     PRIVATE
         UNICODE;_UNICODE;_USE_64BIT_TIME_T;TIXML_USE_STL;TIXMLA_USE_STL;
         _CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;
-        _CRT_NON_CONFORMING_SWPRINTFS=1
+        _CRT_NON_CONFORMING_SWPRINTFS=1;_CRT_NON_CONFORMING_WCSTOK
         )
 target_link_libraries(notepad++
     PUBLIC SciLexer
