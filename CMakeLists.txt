@@ -559,6 +559,17 @@ set(npp_MISC_SOURCES
 set(npp_json_SOURCES PowerEditor/src/json/json.hpp)
 
 
+set(NppShell_SOURCES
+    PowerEditor/src/tools/NppShell/src/Bitmap.cpp
+    PowerEditor/src/tools/NppShell/src/NppShell.cpp
+    PowerEditor/src/tools/NppShell/src/export.def
+    PowerEditor/src/tools/NppShell/src/Bitmap.h
+    PowerEditor/src/tools/NppShell/src/NppShell.h
+    PowerEditor/src/tools/NppShell/src/resource.h
+    PowerEditor/src/tools/NppShell/src/NppShell.rc
+    )
+
+
 add_library(SciLexer SHARED
     ${scintilla_PUBLIC_HEADERS}
     ${scintilla_BOOSTREGEX_SOURCES}
@@ -652,3 +663,7 @@ target_include_directories(notepad++
         PowerEditor/src/WinControls/VerticalFileSwitcher
         PowerEditor/src/WinControls/WindowsDlg
         )
+
+add_library(NppShell SHARED ${NppShell_SOURCES})
+target_compile_definitions(NppShell PRIVATE UNICODE;_UNICODE)
+target_link_libraries(NppShell PRIVATE shlwapi;msimg32)
