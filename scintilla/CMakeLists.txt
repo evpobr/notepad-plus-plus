@@ -1,0 +1,243 @@
+
+find_package(Boost COMPONENTS regex)
+
+set(scintilla_PUBLIC_HEADERS
+  include/BoostRegexSearch.h
+  include/ILexer.h
+  include/SciLexer.h
+  include/Scintilla.h
+  )
+
+set(scintilla_BOOSTREGEX_SOURCES
+  boostregex/getboostver.cpp
+  boostregex/BoostRegExSearch.cxx
+  boostregex/UTF8DocumentIterator.cxx
+  boostregex/AnsiDocumentIterator.h
+  boostregex/UTF8DocumentIterator.h
+  )
+
+set(scintilla_LEXERS_SOURCES
+  lexers/LexA68k.cxx
+  lexers/LexAbaqus.cxx
+  lexers/LexAda.cxx
+  lexers/LexAPDL.cxx
+  lexers/LexAsm.cxx
+  lexers/LexAsn1.cxx
+  lexers/LexASY.cxx
+  lexers/LexAU3.cxx
+  lexers/LexAVE.cxx
+  lexers/LexAVS.cxx
+  lexers/LexBaan.cxx
+  lexers/LexBash.cxx
+  lexers/LexBasic.cxx
+  lexers/LexBibTeX.cxx
+  lexers/LexBullant.cxx
+  lexers/LexCaml.cxx
+  lexers/LexCLW.cxx
+  lexers/LexCmake.cxx
+  lexers/LexCOBOL.cxx
+  lexers/LexCoffeeScript.cxx
+  lexers/LexConf.cxx
+  lexers/LexCPP.cxx
+  lexers/LexCrontab.cxx
+  lexers/LexCsound.cxx
+  lexers/LexCSS.cxx
+  lexers/LexD.cxx
+  lexers/LexDMAP.cxx
+  lexers/LexDMIS.cxx
+  lexers/LexECL.cxx
+  lexers/LexEiffel.cxx
+  lexers/LexErlang.cxx
+  lexers/LexEScript.cxx
+  lexers/LexFlagship.cxx
+  lexers/LexForth.cxx
+  lexers/LexFortran.cxx
+  lexers/LexGAP.cxx
+  lexers/LexGui4Cli.cxx
+  lexers/LexHaskell.cxx
+  lexers/LexHex.cxx
+  lexers/LexHTML.cxx
+  lexers/LexInno.cxx
+  lexers/LexKix.cxx
+  lexers/LexKVIrc.cxx
+  lexers/LexLaTeX.cxx
+  lexers/LexLisp.cxx
+  lexers/LexLout.cxx
+  lexers/LexLua.cxx
+  lexers/LexMagik.cxx
+  lexers/LexMarkdown.cxx
+  lexers/LexMatlab.cxx
+  lexers/LexMetapost.cxx
+  lexers/LexMMIXAL.cxx
+  lexers/LexModula.cxx
+  lexers/LexMPT.cxx
+  lexers/LexMSSQL.cxx
+  lexers/LexMySQL.cxx
+  lexers/LexNimrod.cxx
+  lexers/LexNsis.cxx
+  lexers/LexObjC.cxx
+  lexers/LexOpal.cxx
+  lexers/LexOScript.cxx
+  lexers/LexOthers.cxx
+  lexers/LexPascal.cxx
+  lexers/LexPB.cxx
+  lexers/LexPerl.cxx
+  lexers/LexPLM.cxx
+  lexers/LexPO.cxx
+  lexers/LexPOV.cxx
+  lexers/LexPowerPro.cxx
+  lexers/LexPowerShell.cxx
+  lexers/LexProgress.cxx
+  lexers/LexPS.cxx
+  lexers/LexPython.cxx
+  lexers/LexR.cxx
+  lexers/LexRebol.cxx
+  lexers/LexRegistry.cxx
+  lexers/LexRuby.cxx
+  lexers/LexRust.cxx
+  lexers/LexScriptol.cxx
+  lexers/LexSearchResult.cxx
+  lexers/LexSmalltalk.cxx
+  lexers/LexSML.cxx
+  lexers/LexSorcus.cxx
+  lexers/LexSpecman.cxx
+  lexers/LexSpice.cxx
+  lexers/LexSQL.cxx
+  lexers/LexSTTXT.cxx
+  lexers/LexTACL.cxx
+  lexers/LexTADS3.cxx
+  lexers/LexTAL.cxx
+  lexers/LexTCL.cxx
+  lexers/LexTCMD.cxx
+  lexers/LexTeX.cxx
+  lexers/LexTxt2tags.cxx
+  lexers/LexUser.cxx
+  lexers/LexVB.cxx
+  lexers/LexVerilog.cxx
+  lexers/LexVHDL.cxx
+  lexers/LexVisualProlog.cxx
+  lexers/LexYAML.cxx
+  )
+
+set(scintilla_LEXLIB_SOURCES
+  lexlib/Accessor.cxx
+  lexlib/CharacterCategory.cxx
+  lexlib/CharacterSet.cxx
+  lexlib/LexerBase.cxx
+  lexlib/LexerModule.cxx
+  lexlib/LexerNoExceptions.cxx
+  lexlib/LexerSimple.cxx
+  lexlib/PropSetSimple.cxx
+  lexlib/StyleContext.cxx
+  lexlib/WordList.cxx
+  lexlib/Accessor.h
+  lexlib/CharacterCategory.h
+  lexlib/CharacterSet.h
+  lexlib/LexAccessor.h
+  lexlib/LexerBase.h
+  lexlib/LexerModule.h
+  lexlib/LexerNoExceptions.h
+  lexlib/LexerSimple.h
+  lexlib/OptionSet.h
+  lexlib/PropSetSimple.h
+  lexlib/SparseState.h
+  lexlib/StringCopy.h
+  lexlib/StyleContext.h
+  lexlib/SubStyles.h
+  lexlib/WordList.h
+  )
+
+set(scintilla_SOURCES
+  src/AutoComplete.cxx
+  src/CallTip.cxx
+  src/CaseConvert.cxx
+  src/CaseFolder.cxx
+  src/Catalogue.cxx
+  src/CellBuffer.cxx
+  src/CharClassify.cxx
+  src/ContractionState.cxx
+  src/Decoration.cxx
+  src/Document.cxx
+  src/EditModel.cxx
+  src/Editor.cxx
+  src/EditView.cxx
+  src/ExternalLexer.cxx
+  src/Indicator.cxx
+  src/KeyMap.cxx
+  src/LineMarker.cxx
+  src/MarginView.cxx
+  src/PerLine.cxx
+  src/PositionCache.cxx
+  src/RESearch.cxx
+  src/RunStyles.cxx
+  src/ScintillaBase.cxx
+  src/Selection.cxx
+  src/Style.cxx
+  src/UniConversion.cxx
+  src/ViewStyle.cxx
+  src/XPM.cxx
+  src/AutoComplete.h
+  src/CallTip.h
+  src/CaseConvert.h
+  src/CaseFolder.h
+  src/Catalogue.h
+  src/CellBuffer.h
+  src/CharClassify.h
+  src/ContractionState.h
+  src/Decoration.h
+  src/Document.h
+  src/EditModel.h
+  src/Editor.h
+  src/EditView.h
+  src/ExternalLexer.h
+  src/FontQuality.h
+  src/Indicator.h
+  src/KeyMap.h
+  src/LineMarker.h
+  src/MarginView.h
+  src/Partitioning.h
+  src/PerLine.h
+  src/PositionCache.h
+  src/RESearch.h
+  src/RunStyles.h
+  src/ScintillaBase.h
+  src/Selection.h
+  src/SplitVector.h
+  src/Style.h
+  src/UnicodeFromUTF8.h
+  src/UniConversion.h
+  src/ViewStyle.h
+  src/XPM.h
+  )
+
+set(scintilla_WIN32_SOURCES
+  win32/HanjaDic.cxx
+  win32/PlatWin.cxx
+  win32/ScintillaWin.cxx
+  win32/HanjaDic.h
+  win32/PlatWin.h
+  win32/Scintilla.def
+  win32/ScintRes.rc
+  )
+
+add_library(SciLexer SHARED
+  ${scintilla_PUBLIC_HEADERS}
+  ${scintilla_BOOSTREGEX_SOURCES}
+  ${scintilla_LEXERS_SOURCES}
+  ${scintilla_LEXLIB_SOURCES}
+  ${scintilla_SOURCES}
+  )
+target_compile_definitions(SciLexer PRIVATE SCI_OWNREGEX)
+if(MSVC)
+  target_compile_definitions(SciLexer PRIVATE _CRT_SECURE_NO_WARNINGS)
+endif()
+target_link_libraries(SciLexer PRIVATE Boost::regex)
+if(WIN32)
+  target_link_libraries(SciLexer PRIVATE imm32)
+endif()
+target_include_directories(SciLexer
+  PUBLIC include
+  PRIVATE lexlib;src)
+if(WIN32)
+  target_sources(SciLexer PRIVATE ${scintilla_WIN32_SOURCES})
+endif()
